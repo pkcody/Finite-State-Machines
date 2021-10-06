@@ -6,7 +6,7 @@ public class SpinningPlayerState : IPlayerState
 {
     float x;
     float z;
-    float rotationSpeed = 75f;
+    float rotationSpeed = 360f;
     Player mPlayer;
     Rigidbody rb;
     float time;
@@ -15,13 +15,16 @@ public class SpinningPlayerState : IPlayerState
     {
         rb = player.GetComponent<Rigidbody>();
         player.currentState = this;
-        z += Time.deltaTime * rotationSpeed;
+        
 
-        rb.transform.localRotation = Quaternion.Euler(x,0,z);
+        //rb.transform.localRotation = Quaternion.Euler(x,0,z);
+        //player.transform.Rotate(0f, 360 * z, 0f);
     }
 
     public void Execute(Player player)
     {
+        z = Time.deltaTime * rotationSpeed;
+        player.transform.Rotate(0f, 360 * z, 0f);
         if (!Input.GetKey(KeyCode.S))
         {
             StandingPlayerState STANDstate = new StandingPlayerState();
