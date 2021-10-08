@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class JumpingPlayerState : IPlayerState
 {
-    Player mPlayer;
     Rigidbody rb;
     float time;
 

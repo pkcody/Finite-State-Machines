@@ -24,5 +24,16 @@ public class StandingPlayerState : IPlayerState
             DuckingPlayerState DUCKState = new DuckingPlayerState();
             DUCKState.Enter(player);
         }
+        if (Input.GetKey(KeyCode.B))
+        {
+            // center
+            CenterPlayerState CENTERstate = new CenterPlayerState();
+            CENTERstate.Enter(player);
+        }
+        if (Input.GetKey(KeyCode.M))
+        {
+            CopyPlayerState COPYstate = new CopyPlayerState(player);
+            COPYstate.Enter(player);
+        }
     }
 }

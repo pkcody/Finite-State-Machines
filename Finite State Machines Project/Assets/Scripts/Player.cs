@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public int colorNum = 0;
     public IPlayerState currentState;
     void Awake()
     {

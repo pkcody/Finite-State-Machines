@@ -27,11 +27,12 @@ public class DuckingPlayerState : IPlayerState
         }
         if (Input.GetKey(KeyCode.C))
         {
-            changeScale = new Vector3(2, 1, 2);
-            rb.transform.localScale -= changeScale;
-            rb.transform.localScale *= .5f;
+            changeScale = new Vector3(1, 1, 1);
+            rb.transform.localScale = changeScale;
             // color change
-            Debug.Log("color change");
+            ColorPlayerState COLORstate = new ColorPlayerState();
+            COLORstate.Enter(player);
+            //Debug.Log("color change");
         }
     }
 }
