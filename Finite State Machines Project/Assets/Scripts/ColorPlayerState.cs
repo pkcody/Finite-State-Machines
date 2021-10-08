@@ -43,8 +43,8 @@ public class ColorPlayerState : IPlayerState
         }
         if (!Input.GetKey(KeyCode.B))
         {
-            CenterPlayerState CENTERstate = new CenterPlayerState();
-            CENTERstate.Enter(player);
+            //CenterPlayerState CENTERstate = new CenterPlayerState();
+            //CENTERstate.Enter(player);
         }
     }
 }
